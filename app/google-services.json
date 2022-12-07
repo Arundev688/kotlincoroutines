@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489080269317",
+    "project_id": "coroutines-dac92",
+    "storage_bucket": "coroutines-dac92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489080269317:android:ee65fb9d52d8e6b0a68a6c",
+        "android_client_info": {
+          "package_name": "com.hutech.coroutines"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489080269317-p3rmubqci0ajqbp6jcjri8jocft0ss1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATN4NkjUYlz4GThdvOJt6zJp9Uf2KUxj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489080269317-p3rmubqci0ajqbp6jcjri8jocft0ss1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

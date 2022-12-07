@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- for api 33 & above pushnotification this permission needed -->
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- use location in background -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+	<application
+		android:name=".apilocalcachi.BankApplication"
+		android:allowBackup="true"
+		android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+		android:icon="@mipmap/ic_launcher"
+		android:label="Demo"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:supportsRtl="true"
+		android:theme="@style/Theme.Coroutines"
+		tools:node="merge"
+		tools:replace="android:appComponentFactory">
+		<activity
+			android:name=".demo.PicImageActivity"
+			android:exported="false" />
+		<activity
+			android:name=".apilocalcachi.ApiCatchActivity"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+
+			<meta-data
+				android:name="android.app.lib_name"
+				android:value="" />
+		</activity>
+		<activity
+			android:name=".view.SelectCardActivity"
+			android:exported="false">
+			<meta-data
+				android:name="android.app.lib_name"
+				android:value="" />
+		</activity>
+		<activity
+			android:name=".view.DummyActivity"
+			android:exported="false">
+			<meta-data
+				android:name="android.app.lib_name"
+				android:value="" />
+		</activity>
+		<activity
+			android:name=".notification_api33.NotificationActivity"
+			android:exported="false">
+			<meta-data
+				android:name="android.app.lib_name"
+				android:value="" />
+		</activity>
+
+		<service
+			android:name=".locationinbackground.LocationService"
+			android:foregroundServiceType="location" />
+
+		<activity
+			android:name=".view.MainActivity"
+			android:exported="false">
+			<meta-data
+				android:name="android.app.lib_name"
+				android:value="" />
+		</activity>
+		<activity
+			android:name=".view.Login"
+			android:exported="false" />
+		<activity
+			android:name=".locationinbackground.LocationActivity"
+			android:exported="false" />
+
+		<receiver
+			android:name=".broadcastreceiver.ExampleBroadcastReceiver"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+
+		<service
+			android:name=".notification_api33.MyFirebaseMessagingService"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_channel_id"
+			android:value="@string/default_notification_channel_id" />
+		<!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_icon"
+			android:resource="@android:drawable/stat_notify_sync" />
+		<!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_color"
+			android:resource="@color/teal_700" />
+	</application>
+
+</manifest>

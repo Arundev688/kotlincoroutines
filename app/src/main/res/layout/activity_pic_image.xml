@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".demo.PicImageActivity">
+
+	<de.hdodenhof.circleimageview.CircleImageView
+		android:id="@+id/edit_profile_image"
+		android:layout_width="96dp"
+		android:layout_height="96dp"
+		android:layout_marginStart="153dp"
+		android:layout_marginTop="100dp"
+		android:src="@drawable/ic_search"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/edit_image"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginStart="224dp"
+		android:layout_marginTop="170dp"
+		android:src="@drawable/ic_cancel"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
