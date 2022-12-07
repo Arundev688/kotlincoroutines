@@ -16,6 +16,8 @@ import dagger.hilt.android.AndroidEntryPoint
 class ApiCatchActivity : AppCompatActivity() {
     private val viewmodel:BankViewmodel by viewModels()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityApiCatchBinding.inflate(layoutInflater)
