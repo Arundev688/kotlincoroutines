@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         initAdapter()
-        logRegToken()
+
 
         vm.fetchAllPosts()
 
